@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>VOCABLISTS!!!</title>
+    <style>
+        .explanation-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+            border: 1px solid #e9ecef;
+        }
+
+        .explanation-bar > div {
+            padding: 0 5px;
+        }
+
+        .group-title {
+            margin: 20px 0 10px;
+            color: #046464;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .author {
+            text-align: right;
+            color: #2c3e50;
+        }
+
+        .word-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .word {
+            width: 200px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .definition {
+            flex: 1;
+            margin: 0 20px;
+            color: #34495e;
+        }
+
+        .translate-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .translate-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .translate-link {
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .translate-icon {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.3s;
+        }
+
+        .translate-fallback {
+            display: none;
+            background-color: #3498db;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .translate-link:hover::after {
+            content: attr(data-site);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .translate-links {
+            display: flex;
+            gap: 8px;
+            min-width: 120px;
+        }
+
+        .translate-link:hover::after {
+            content: attr(data-site);
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .group-title {
+            font-size: 1.4em;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .page-btn {
+            padding: 8px 16px;
+            border: 1px solid #2673a5;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .page-btn.active {
+            padding: 8px 16px;
+            border: 1px solid #3498db;
+            background-color: white;
+            color: #3498db;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .page-btn:hover:not(.active) {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+
+        .translate-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .notification {
+            text-align: center;
+            color:#ff4423
+        }
+
+        @media (min-width: 768px) {
+            .translate-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Online VocabLists - ELA10 (Hons)</h1>
+    <h4 class="author">By Miles</h4>
+    <h5 style="text-align: right; color: gray; transform:translateY(-50%);">Please report any errors you met, including but not limited to <br>translation errors or word type errors, thanks for your supporting.</h4>
+    <h4 class="notification">VocabList 4 to 9 is upcoming, I'm still copying them to the website file</h4>
+        <div id="word-container"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <script>
+        const translateSites = [
+        {
+            name: "Dictionary of Cambridge",
+            icon: "https://tse3-mm.cn.bing.net/th/id/OIP-C.vCmqMeMBSh9d464_vEeTiQHaIk?cb=iwc2&rs=1&pid=ImgDetMain",
+            urlTemplate: "https://dictionary.cambridge.org/dictionary/english/"
+        }, 
+        {
+            name: "Youdao Dict",
+            icon: "https://ydlunacommon-cdn.nosdn.127.net/31cf4b56e6c0b3af668aa079de1a898c.png",
+            urlTemplate: "https://dict.youdao.com/result?lang=en&word="
+        }];
+
+        let wordGroups = [];
+        
+        async function loadData() {
+            try {
+                const response = await fetch('words.json');
+                wordGroups = await response.json();
+                renderWords();
+                renderPagination();
+            } catch (error) {
+                console.error('Failed to load data:', error);
+                alert('Failed to load data files, please contact server operator');
+            }
+        }
+
+        let currentGroup = 0;
+
+        function renderWords() {
+            const container = document.getElementById('word-container');
+            const currentGroupData = wordGroups[currentGroup];
+            if (!currentGroupData) return;
+
+            container.innerHTML = `
+                <h3 class="group-title">${currentGroupData.groupName}</h3>
+                <div class="explanation-bar">
+                    <div class="word" style="color: #205c84">Word</div>
+                    <div class="definition" style="flex: 1; margin: 0 20px">Definition & Translation</div>
+                    <div style="min-width: 120px">Link to Dictionary</div>
+                </div>
+                ${wordGroups[currentGroup].words.map(word => `
+                    <div class="word-card">
+                        <div class="word">${word.word}</div>
+                        <div class="definition">${word.definition}<br>${word.translation}</div>
+                        ${word.hideTranslateButton ? '' : `
+                        <div class="translate-links">
+                            ${translateSites.map(site => `
+                                <div class="translate-link" 
+                                    data-site="${site.name}"
+                                    onclick="window.open('${site.urlTemplate}${encodeURIComponent(word.word)}', '_blank')">
+                                    <img class="translate-icon" 
+                                        src="${site.icon}" 
+                                        alt="${site.name}"
+                                        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                                    <span class="translate-fallback">${site.name}</span>
+                                </div>
+                            `).join('')}
+                        </div>`}
+                    </div>
+                `).join('')}
+            `;
+        }
+
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            const buttons = wordGroups.map((group, index) => `
+                <button class="page-btn ${index === currentGroup ? 'active' : ''}" 
+                        onclick="changeGroup(${index})"
+                        data-group-index="${index}">
+                    ${group.groupName}
+                </button>
+            `);
+            pagination.innerHTML = buttons.join('');
+        }
+
+        function changeGroup(groupIndex) {
+            currentGroup = groupIndex;
+            renderWords();
+            renderPagination();
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
