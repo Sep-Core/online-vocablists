@@ -365,12 +365,13 @@
             {
                 "word": "to cut corners",
                 "definition": "Idiom. to do something improperly to save time or money; take a shortcut",
-                "translation": "走捷径"
+                "translation": "走捷径",
+                "hideTranslateButton": true
             }
         ]
     },
     {
-        "gropuName": "VocabList V",
+        "groupName": "VocabList V",
         "words": [
             {
                 "word": "auspicious",
@@ -456,6 +457,107 @@
                 "word": "water off a duck's back",
                 "definition": "Idiom. criticisms or warnings that have no impact on a person",
                 "translation": "毫无影响"
+            }
+        ]
+    },
+    {
+        "groupName": "VocabList VI",
+        "words": [
+            {
+                "word": "decorum",
+                "definition": "n. proper behaviour and manners, according to societal norms",
+                "translation": "礼仪；礼貌；端正"
+            },
+            {
+                "word": "finesse",
+                "definition": "n. denotes refinement and subtlety in a task or situation",
+                "translation": "策略；纤细；灵巧"
+            },
+            {
+                "word": "protocol",
+                "definition": "n. the expected behaviour in any",
+                "translation": "礼仪，礼节；国际议定书，协议；条约草案，（协议或条约的）附件；（协定，公约）修正案（或增补）；（数据传递的）协议，规约；科学实验计划，医疗方案；（科学实验结果的）官方记录"
+            },
+            {
+                "word": "propriety",
+                "definition": "n. behaviour in accordance with social norms; appropriateness",
+                "translation": "<正式>（行为，道德）正当，得体；<正式>行为规范，礼节"
+            },
+            {
+                "word": "nuance",
+                "definition": "n. subtle, slight variations and sensitivity to those variations",
+                "translation": "细微差别"
+            },
+            {
+                "word": "resolute",
+                "definition": "n.& adj. bold, determined, unwavering in purpose",
+                "translation": "坚决（的），果断（的）"
+            },
+            {
+                "word": "undaunted",
+                "definition": "adj. not discouraged or disheartened (daunted is to be discouraged or disheartened)",
+                "translation": "勇敢的，无畏的"
+            },
+            {
+                "word": "intrepid",
+                "definition": "adj. fearlessly brave (synonym for resolute)",
+                "translation": "无畏的；勇敢的；勇猛的"
+            },
+            {
+                "word": "audacity",
+                "definition": "n. to be fearless, reckless, daring, brazen, ignoring rules or convention",
+                "translation": "大胆；厚颜无耻"
+            },
+            {
+                "word": "fortitude",
+                "definition": "n. the strength to ensure pain and hardship with courage",
+                "translation": "刚毅；不屈不挠；勇气"
+            },
+            {
+                "word": "iconoclastic",
+                "definition": "adj. someone who seeks to overthrow popular ideas or institutions with resolution and temerity",
+                "translation": "打破旧习的；偶像破坏的"
+            },
+            {
+                "word": "brazen",
+                "definition": "adj. insolent, rude, shameless in their audacity",
+                "translation": "厚颜无耻的；无所顾忌的；黄铜制的；黄铜色的；（声音）响而刺耳的"
+            },
+            {
+                "word": "cheeky",
+                "definition": "adj. bold, but often considered charming and amusing, in disobedience or ignoring of convention",
+                "translation": "无耻的；厚脸皮的"
+            },
+            {
+                "word": "contestant",
+                "definition": "n. someone who takes part in a competition",
+                "translation": "参赛者，竞争者；争辩者"
+            },
+            {
+                "word": "reimbursement",
+                "definition": "v.& n. to repay/the repayment",
+                "translation": "赔付，偿付，赔偿；赔偿金额"
+            },
+            {
+                "word": "infringement",
+                "definition": "v.& n. a violation of or encroachment on a right or privilege",
+                "translation": "（对他人权益的）侵犯，侵害；（对法律、规则等的）违反，违背"
+            },
+            {
+                "word": "redundant",
+                "definition": "adj. superfluous, unnecessary of similarity or repetition",
+                "translation": "<英> 被解雇的，被裁员的；多余的，累赘的；（为预防机器或系统中主要组件故障而设的）复置装置的，备用的"
+            },
+            {
+                "word": "contingent",
+                "definition": "adj. dependent on or conditioned by something else; likely but not certain; subject to chance or unforseen circumstances",
+                "translation": "附带的，依情况而定的；偶然（发生）的，可能的"
+            },
+            {
+                "word": "cross that bridge when we come to it",
+                "definition": "Idiom. to deal with a problem if and when necessary (delaying until appropriate)",
+                "translation": "船到桥头自然直",
+                "hideTranslateButton": true
             }
         ]
     },
