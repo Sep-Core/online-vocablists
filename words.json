@@ -451,12 +451,14 @@
             {
                 "word": "water under the bridge",
                 "definition": "Idiom. a conflcit or problem no longer matters",
-                "translation": "过去的事情，既定的事实"
+                "translation": "过去的事情，既定的事实",
+                "hideTranslateButton": true
             },
             {
                 "word": "water off a duck's back",
                 "definition": "Idiom. criticisms or warnings that have no impact on a person",
-                "translation": "毫无影响"
+                "translation": "毫无影响",
+                "hideTranslateButton": true
             }
         ]
     },
