@@ -1,2 +1,2 @@
 # online-vocablists
-A website for collecting ELA vocablist words
+A website for collecting ELA materials
