@@ -1,0 +1,496 @@
+{
+    "categories": [
+        {
+            "name": "Emphasizing or Highlighting",
+            "words": [
+                {
+                    "word": "suggest",
+                    "descriptions": [
+                        {"name": "translation", "content": "显示，表明；暗示，暗指；使人想到，使人联想到"}
+                    ]
+                },
+                {
+                    "word": "hint",
+                    "descriptions": [
+                        {"name": "translation", "content": "暗示，示意"}
+                    ]
+                },
+                {
+                    "word": "cast",
+                    "descriptions": [
+                        {"name": "translation", "content": "投射；描述，描写"}
+                    ]
+                },
+                {
+                    "word": "shed light",
+                    "descriptions": [
+                        {"name": "translation", "content": "阐明，使清晰：用于字面意义上的照明，也可以用于引申义上的使事物清晰明了"}
+                    ]
+                },
+                {
+                    "word": "acknowledge",
+                    "descriptions": [
+                        {"name": "translation", "content": "承认；认可；致谢"}
+                    ]
+                },
+                {
+                    "word": "emphasize",
+                    "descriptions": [
+                        {"name": "translation", "content": "强调，使突出"}
+                    ]
+                },
+                {
+                    "word": "underscore",
+                    "descriptions": [
+                        {"name": "translation", "content": "强调；在...下划线"}
+                    ]
+                },
+                {
+                    "word": "explore",
+                    "descriptions": [
+                        {"name": "translation", "content": "探讨，探究；考察，探索"}
+                    ]
+                },
+                {
+                    "word": "establish",
+                    "descriptions": [
+                        {"name": "translation", "content": "建立，设立；证实，确定；发现，找出"}
+                    ]
+                },
+                {
+                    "word": "support",
+                    "descriptions": [
+                        {"name": "translation", "content": "支持，拥护，鼓励；帮助，援助；支撑，承受"}
+                    ]
+                },
+                {
+                    "word": "quote",
+                    "descriptions": [
+                        {"name": "translation", "content": "引用，引述；举例说明"}
+                    ]
+                },
+                {
+                    "word": "cite",
+                    "descriptions": [
+                        {"name": "translation", "content": "引用，援引；引证"}
+                    ]
+                },
+                {
+                    "word": "call attention to",
+                    "descriptions": [
+                        {"name": "translation", "content": "引起注意：通过言语或行动来吸引别人的注意力"}
+                    ]
+                },
+                {
+                    "word": "draw attention to",
+                    "descriptions": [
+                        {"name": "translation", "content": "吸引对……的注意力"}
+                    ]
+                },
+                {
+                    "word": "define",
+                    "descriptions": [
+                        {"name": "translation", "content": "给……下定义，解释；阐明，使清楚"}
+                    ]
+                },
+                {
+                    "word": "juxtapose",
+                    "descriptions": [
+                        {"name": "translation", "content": "并列；并置"}
+                    ]
+                },
+                {
+                    "word": "draw a parallel between",
+                    "descriptions": [
+                        {"name": "translation", "content": "寻找相似之处：在两个事物之间找到相似的地方，进行比较"}
+                    ]
+                },
+                {
+                    "word": "foreshadow",
+                    "descriptions": [
+                        {"name": "translation", "content": "预示；成为……的前兆"}
+                    ]
+                },
+                {
+                    "word": "illustrate",
+                    "descriptions": [
+                        {"name": "translation", "content": "加插图于；说明，阐明；证明，证实"}
+                    ]
+                },
+                {
+                    "word": "persuade",
+                    "descriptions": [
+                        {"name": "translation", "content": "说服，劝服；使相信，使信服"}
+                    ]
+                },
+                {
+                    "word": "demonstrate",
+                    "descriptions": [
+                        {"name": "translation", "content": "证明；示范，演示；表露"}
+                    ]
+                },
+                {
+                    "word": "argue",
+                    "descriptions": [
+                        {"name": "translation", "content": "主张，认为；说服；争论，争辩"}
+                    ]
+                },
+                {
+                    "word": "use an analogy",
+                    "descriptions": [
+                        {"name": "translation", "content": "使用类比：用一个相似但不同的事物来解释或比较另一个事物"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Analyzing or Evaluating",
+            "words": [
+                {
+                    "word": "clarify",
+                    "descriptions": [
+                        {"name": "translation", "content": "澄清，阐明"}
+                    ]
+                },
+                {
+                    "word": "challenge",
+                    "descriptions": [
+                        {"name": "translation", "content": "挑战；质疑，拒绝接受"}
+                    ]
+                },
+                {
+                    "word": "debate",
+                    "descriptions": [
+                        {"name": "translation", "content": "反复思考，斟酌；讨论，辩论"}
+                    ]
+                },
+                {
+                    "word": "mock",
+                    "descriptions": [
+                        {"name": "translation", "content": "嘲笑，（模仿）嘲弄；使显得徒劳，使显得可笑；（照原尺寸）模仿，仿制"}
+                    ]
+                },
+                {
+                    "word": "trivialize",
+                    "descriptions": [
+                        {"name": "translation", "content": "使平凡；使琐碎"}
+                    ]
+                },
+                {
+                    "word": "question",
+                    "descriptions": [
+                        {"name": "translation", "content": "向……提出问题，盘问；对……提出质疑（异议），怀疑"}
+                    ]
+                },
+                {
+                    "word": "contrast",
+                    "descriptions": [
+                        {"name": "translation", "content": "对比，对照；显出明显的差异，形成对比"}
+                    ]
+                },
+                {
+                    "word": "criticize",
+                    "descriptions": [
+                        {"name": "translation", "content": "批评，指责；评论"}
+                    ]
+                },
+                {
+                    "word": "analyze",
+                    "descriptions": [
+                        {"name": "translation", "content": "对……进行分析，分解"}
+                    ]
+                },
+                {
+                    "word": "evoke",
+                    "descriptions": [
+                        {"name": "translation", "content": "引起，唤起（感情、记忆或形象）"}
+                    ]
+                },
+                {
+                    "word": "induce",
+                    "descriptions": [
+                        {"name": "translation", "content": "引诱，诱使；引起，导致"}
+                    ]
+                },
+                {
+                    "word": "exemplify",
+                    "descriptions": [
+                        {"name": "translation", "content": "是……的典范；举例说明"}
+                    ]
+                },
+                {
+                    "word": "attack",
+                    "descriptions": [
+                        {"name": "translation", "content": "批评，抨击；侵蚀，侵害；全力应对，奋力处理"}
+                    ]
+                },
+                {
+                    "word": "expose",
+                    "descriptions": [
+                        {"name": "translation", "content": "暴露，使显露；揭露，揭发"}
+                    ]
+                },
+                {
+                    "word": "satire",
+                    "descriptions": [
+                        {"name": "translation", "content": "讽刺，讥讽"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dismissing, Downplaying, or Critiquing",
+            "words": [
+                {
+                    "word": "belittle",
+                    "descriptions": [
+                        {"name": "translation", "content": "轻视；贬低；使相形见小"}
+                    ]
+                },
+                {
+                    "word": "berate",
+                    "descriptions": [
+                        {"name": "translation", "content": "严责；申斥"}
+                    ]
+                },
+                {
+                    "word": "demonize",
+                    "descriptions": [
+                        {"name": "translation", "content": "妖魔化；使……成为魔鬼"}
+                    ]
+                },
+                {
+                    "word": "disparage",
+                    "descriptions": [
+                        {"name": "translation", "content": "贬低，诋毁"}
+                    ]
+                },
+                {
+                    "word": "ridicule",
+                    "descriptions": [
+                        {"name": "translation", "content": "嘲笑，奚落"}
+                    ]
+                },
+                {
+                    "word": "minimize",
+                    "descriptions": [
+                        {"name": "translation", "content": "使减少到最低限度；贬低，使显得不重要"}
+                    ]
+                },
+                {
+                    "word": "dismiss",
+                    "descriptions": [
+                        {"name": "translation", "content": "不考虑，不理会；驳回，停止受理"}
+                    ]
+                },
+                {
+                    "word": "denigrate",
+                    "descriptions": [
+                        {"name": "translation", "content": "诋毁；使变黑；玷污"}
+                    ]
+                },
+                {
+                    "word": "mask",
+                    "descriptions": [
+                        {"name": "translation", "content": "掩饰；使模糊"}
+                    ]
+                },
+                {
+                    "word": "point out",
+                    "descriptions": [
+                        {"name": "translation", "content": "指出，提及：谈论或提及"}
+                    ]
+                },
+                {
+                    "word": "downplay",
+                    "descriptions": [
+                        {"name": "translation", "content": "对……轻描淡写；轻视，贬低"}
+                    ]
+                },
+                {
+                    "word": "vilify",
+                    "descriptions": [
+                        {"name": "translation", "content": "诽谤；中伤；轻视；贬低"}
+                    ]
+                },
+                {
+                    "word": "condemn",
+                    "descriptions": [
+                        {"name": "translation", "content": "谴责，严厉指责；宣判，判决"}
+                    ]
+                },
+                {
+                    "word": "exaggerate",
+                    "descriptions": [
+                        {"name": "translation", "content": "夸大，言过其实；使扩大"}
+                    ]
+                },
+                {
+                    "word": "excoriate",
+                    "descriptions": [
+                        {"name": "translation", "content": "严厉的责难"}
+                    ]
+                },
+                {
+                    "word": "challenge",
+                    "descriptions": [
+                        {"name": "translation", "content": "挑战；质疑，拒绝接受"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Explaining or Clarifying",
+            "words": [
+                {
+                    "word": "observe",
+                    "descriptions": [
+                        {"name": "translation", "content": "注意到，观察到；注视，监视"}
+                    ]
+                },
+                {
+                    "word": "assert",
+                    "descriptions": [
+                        {"name": "translation", "content": "坚称，断言；维护，坚持"}
+                    ]
+                },
+                {
+                    "word": "note",
+                    "descriptions": [
+                        {"name": "translation", "content": "留意，注意；指出，提及；记录，记下"}
+                    ]
+                },
+                {
+                    "word": "explain",
+                    "descriptions": [
+                        {"name": "translation", "content": "解释，说明"}
+                    ]
+                },
+                {
+                    "word": "analyze",
+                    "descriptions": [
+                        {"name": "translation", "content": "对……进行分析，分解"}
+                    ]
+                },
+                {
+                    "word": "clarify",
+                    "descriptions": [
+                        {"name": "translation", "content": "澄清，阐明"}
+                    ]
+                },
+                {
+                    "word": "narrate",
+                    "descriptions": [
+                        {"name": "translation", "content": "讲，叙述"}
+                    ]
+                },
+                {
+                    "word": "describe",
+                    "descriptions": [
+                        {"name": "translation", "content": "描述，形容"}
+                    ]
+                },
+                {
+                    "word": "define",
+                    "descriptions": [
+                        {"name": "translation", "content": "给……下定义，解释；阐明，使清楚"}
+                    ]
+                },
+                {
+                    "word": "open",
+                    "descriptions": [
+                        {"name": "translation", "content": "展现，出现；使某人更乐意考虑某事"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Suggesting or Implying",
+            "words": [
+                {
+                    "word": "intimate",
+                    "descriptions": [
+                        {"name": "translation", "content": "透露，暗示；宣布，通告"}
+                    ]
+                },
+                {
+                    "word": "imply",
+                    "descriptions": [
+                        {"name": "translation", "content": "暗示，暗指；意味着；必然包含"}
+                    ]
+                },
+                {
+                    "word": "hint",
+                    "descriptions": [
+                        {"name": "translation", "content": "暗示，示意"}
+                    ]
+                },
+                {
+                    "word": "suggest",
+                    "descriptions": [
+                        {"name": "translation", "content": "显示，表明；暗示，暗指；使人想到，使人联想到"}
+                    ]
+                },
+                {
+                    "word": "foreshadow",
+                    "descriptions": [
+                        {"name": "translation", "content": "预示；成为……的前兆"}
+                    ]
+                },
+                {
+                    "word": "draw attention to the irony",
+                    "descriptions": [
+                        {"name": "translation", "content": "注意其中的讽刺意味"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Transition or Conclusion",
+            "words": [
+                {
+                    "word": "transition to",
+                    "descriptions": [
+                        {"name": "translation", "content": "转变为：从一种形式或类型转变为另一种形式或类型，或者指这个过程"}
+                    ]
+                },
+                {
+                    "word": "shift to",
+                    "descriptions": [
+                        {"name": "translation", "content": "转移至：将某物或某人从一个位置或方向移动或改变到另一个位置或方向，尤其是稍微移动或改变"}
+                    ]
+                },
+                {
+                    "word": "conclude",
+                    "descriptions": [
+                        {"name": "translation", "content": "推断；断定；决定"}
+                    ]
+                },
+                {
+                    "word": "finish",
+                    "descriptions": [
+                        {"name": "translation", "content": "完成，做好"}
+                    ]
+                },
+                {
+                    "word": "close",
+                    "descriptions": [
+                        {"name": "translation", "content": "（使）结束，（使）停止；关闭"}
+                    ]
+                },
+                {
+                    "word": "end",
+                    "descriptions": [
+                        {"name": "translation", "content": "结束，终止"}
+                    ]
+                },
+                {
+                    "word": "add",
+                    "descriptions": [
+                        {"name": "translation", "content": "包括；补充说，继续说"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

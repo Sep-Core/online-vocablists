@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>powerVerbs</title>
+    <style>
+        :root {
+            --primary-color: #5c9ee7; 
+            --background-color: #ffffff; 
+            --border-color: #e0e0e0;
+            --hover-color: #f5f9ff;
+            --shadow-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .category, .word, .description-item {
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 5px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+            transition: all 0.3s ease;
+            min-height: 60px; /* 统一高度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .category:hover, .word:hover, .description-item:hover {
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+        
+        .category {
+            margin-left: 0;
+            padding: 10px;
+        }
+
+        .category-content {
+            margin-top: 10px;
+        }
+        
+        .word {
+            margin-left: 30px;
+        }
+        
+        .description-item {
+            margin-left: 60px;
+            background-color: #f9f9f9;
+        }
+        
+        .category-header, .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .category-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .word-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .toggle-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+        
+        .toggle-btn:hover {
+            background: #4a85d3;
+        }
+        
+        .description-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .description-content {
+            color: #555;
+        }
+        
+        .icon {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .category.collapsed .icon {
+            transform: rotate(-90deg);
+        }
+        
+        .word.collapsed .icon {
+            transform: rotate(-90deg);
+        }
+        
+        .word-content, .description-content-wrapper {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PowerVerbs - ELA 11 Honors 2025-2026</h1>
+        <p class="description">by Miles</p>
+    </header>
+    
+    <main id="word-container">
+        <div class="loading">正在加载单词数据...</div>
+    </main>
+
+    <footer>
+        <p>看到这行字v我50</p>
+    </footer>
+
+    <script>
+        fetch('words.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络响应不正常');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // 移除加载提示
+                document.querySelector('.loading').remove();
+                // 生成单词库内容
+                renderWordData(data);
+            })
+            .catch(error => {
+                document.querySelector('.loading').textContent = 
+                    '加载数据失败: ' + error.message + '。请确保words.json文件存在且格式正确。';
+            });
+
+        function renderWordData(wordData) {
+            const container = document.getElementById('word-container');
+            
+            // 生成类别
+            wordData.categories.forEach(category => {
+                const categoryElement = createCategoryElement(category);
+                container.appendChild(categoryElement);
+            });
+            
+            // 添加事件监听器
+            document.querySelectorAll('.category-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const category = this.parentElement;
+                    const content = category.querySelector('.category-content');
+                    content.classList.toggle('hidden');
+                    category.classList.toggle('collapsed');
+                    
+                    // 更新按钮显示状态
+                    const toggleBtn = category.querySelector('.toggle-all-words');
+                    if (content.classList.contains('hidden')) {
+                        toggleBtn.style.display = 'none';
+                    } else {
+                        toggleBtn.style.display = 'block';
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.word-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const word = this.parentElement;
+                    const content = word.querySelector('.word-content');
+                    content.classList.toggle('hidden');
+                    word.classList.toggle('collapsed');
+                });
+            });
+            
+            // 添加一键折叠/展开按钮事件监听器
+            document.querySelectorAll('.toggle-all-words').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // 阻止事件冒泡，避免触发类别折叠
+                    const category = this.closest('.category');
+                    const words = category.querySelectorAll('.word-content');
+                    const isHidden = words[0].classList.contains('hidden');
+                    
+                    words.forEach(wordContent => {
+                        wordContent.classList.toggle('hidden', !isHidden);
+                    });
+                    
+                    const wordElements = category.querySelectorAll('.word');
+                    wordElements.forEach(word => {
+                        word.classList.toggle('collapsed', !isHidden);
+                    });
+                    
+                    this.textContent = isHidden ? '折叠所有单词' : '展开所有单词';
+                });
+            });
+        }
+
+        function createCategoryElement(category) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.className = 'category';
+            
+            const categoryHeader = document.createElement('div');
+            categoryHeader.className = 'category-header';
+            categoryHeader.innerHTML = `
+                <div>
+                    <span class="icon">▼</span>
+                    <span class="category-title">${category.name}</span>
+                </div>
+                <button class="toggle-btn toggle-all-words">展开所有单词</button>
+            `;
+            
+            const categoryContent = document.createElement('div');
+            categoryContent.className = 'category-content';
+            
+            category.words.forEach(word => {
+                categoryContent.appendChild(createWordElement(word));
+            });
+            
+            categoryDiv.appendChild(categoryHeader);
+            categoryDiv.appendChild(categoryContent);
+            
+            return categoryDiv;
+        }
+
+        function createWordElement(word) {
+            const wordDiv = document.createElement('div');
+            wordDiv.className = 'word collapsed';
+            
+            const wordHeader = document.createElement('div');
+            wordHeader.className = 'word-header';
+            wordHeader.innerHTML = `
+                <div>
+                    <span class="icon">▼</span>
+                    <span class="word-title">${word.word}</span>
+                </div>
+            `;
+            
+            const wordContent = document.createElement('div');
+            wordContent.className = 'word-content hidden';
+            
+            word.descriptions.forEach(desc => {
+                const descItem = document.createElement('div');
+                descItem.className = 'description-item';
+                descItem.innerHTML = `
+                    <!-- <span class="description-name">${desc.name}:</span> -->
+                    <span class="description-content">${desc.content}</span>
+                `;
+                wordContent.appendChild(descItem);
+            });
+            
+            wordDiv.appendChild(wordHeader);
+            wordDiv.appendChild(wordContent);
+            
+            return wordDiv;
+        }
+    </script>
+</body>
+</html>
