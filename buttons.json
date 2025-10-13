@@ -1,4 +1,5 @@
 [
-  {"text":"ELA 10 Honors VocabLists", "url":"ela10honors/index.html", "icon":"●"},
-  {"text":"PowerVerbs", "url":"powerVerbs/index.html", "icon":"●"}
+  {"text":"ELA 10 Honors VocabLists", "url":"ela10honors/index.html"},
+  {"text":"PowerVerbs", "url":"powerVerbs/index.html"},
+  {"text":"Rhetorical Analysis", "url":"rhetoricalAnalysis/index.html"}
 ]
