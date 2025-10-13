@@ -1,0 +1,221 @@
+{
+    "categories": [
+      {
+        "id": "cat1",
+        "name": "Sad",
+        "description": "Words expressing sadness, sorrow, or melancholy"
+      },
+      {
+        "id": "cat2",
+        "name": "Happy",
+        "description": "Words expressing joy, celebration, or optimism"
+      },
+      {
+        "id": "cat3",
+        "name": "Angry",
+        "description": "Words expressing anger, frustration, or indignation"
+      },
+      {
+        "id": "cat4",
+        "name": "Critical",
+        "description": "Words expressing criticism, skepticism, or judgment"
+      },
+      {
+        "id": "cat5",
+        "name": "Reflective",
+        "description": "Words expressing contemplation, nostalgia, or thoughtfulness"
+      }
+    ],
+    "words": [
+      {
+        "id": "word1",
+        "word": "somber",
+        "definition": "dark, gloomy, or solemn",
+        "category": "cat1",
+        "relatedWords": ["mourn", "grieve", "lament", "brood"]
+      },
+      {
+        "id": "word2",
+        "word": "despairing",
+        "definition": "feeling hopeless or full of despair",
+        "category": "cat1",
+        "relatedWords": ["lament"]
+      },
+      {
+        "id": "word3",
+        "word": "regretful",
+        "definition": "feeling sorry or remorseful about something",
+        "category": "cat1",
+        "relatedWords": ["atone", "apologize", "make amends"]
+      },
+      {
+        "id": "word4",
+        "word": "grief-stricken",
+        "definition": "feeling great sorrow or distress, especially due to loss",
+        "category": "cat1",
+        "relatedWords": ["lament", "grieve", "sorrow"]
+      },
+      {
+        "id": "word5",
+        "word": "bittersweet",
+        "definition": "something that is both happy and sad at the same time",
+        "category": "cat1",
+        "relatedWords": ["take comfort", "find solace"]
+      },
+      {
+        "id": "word6",
+        "word": "melancholic",
+        "definition": "having a pensive or wistful sadness",
+        "category": "cat1",
+        "relatedWords": ["brood", "reflect", "ruminate"]
+      },
+      {
+        "id": "word7",
+        "word": "pessimistic",
+        "definition": "feeling or showing an attitude of hopelessness or gloom",
+        "category": "cat1",
+        "relatedWords": ["predict", "warn", "caution"]
+      },
+      {
+        "id": "word8",
+        "word": "joyful",
+        "definition": "full of happiness and delight",
+        "category": "cat2",
+        "relatedWords": ["rejoice", "delight", "exult", "revel"]
+      },
+      {
+        "id": "word9",
+        "word": "celebratory",
+        "definition": "characterized by or expressing celebration",
+        "category": "cat2",
+        "relatedWords": ["toast", "honor", "commemorate"]
+      },
+      {
+        "id": "word10",
+        "word": "delighted",
+        "definition": "feeling great pleasure or satisfaction",
+        "category": "cat2",
+        "relatedWords": ["beam", "glow", "radiate"]
+      },
+      {
+        "id": "word11",
+        "word": "jubilant",
+        "definition": "feeling or expressing great happiness or triumph",
+        "category": "cat2",
+        "relatedWords": ["cheer", "exult", "revel"]
+      },
+      {
+        "id": "word12",
+        "word": "bright",
+        "definition": "cheerful and full of hope",
+        "category": "cat2",
+        "relatedWords": ["encourage", "inspire", "praise"]
+      },
+      {
+        "id": "word13",
+        "word": "optimistic",
+        "definition": "hopeful about the future and confident that good things will happen",
+        "category": "cat2",
+        "relatedWords": ["encourage", "inspire", "praise"]
+      },
+      {
+        "id": "word14",
+        "word": "lighthearted",
+        "definition": "cheerful and carefree",
+        "category": "cat2",
+        "relatedWords": ["amuse", "entertain", "delight"]
+      },
+      {
+        "id": "word15",
+        "word": "enthusiastic",
+        "definition": "full of intense and eager enjoyment or interest",
+        "category": "cat2",
+        "relatedWords": ["motivate", "encourage", "energize"]
+      },
+      {
+        "id": "word16",
+        "word": "indignant",
+        "definition": "feeling or showing anger at something unjust or unfair",
+        "category": "cat3",
+        "relatedWords": ["protest", "assert", "defend"]
+      },
+      {
+        "id": "word17",
+        "word": "incensed",
+        "definition": "filled with anger or rage",
+        "category": "cat3",
+        "relatedWords": ["vent", "complain"]
+      },
+      {
+        "id": "word18",
+        "word": "frustrated",
+        "definition": "feeling annoyed with a situation",
+        "category": "cat3",
+        "relatedWords": ["confront", "complain", "remedy"]
+      },
+      {
+        "id": "word19",
+        "word": "critical",
+        "definition": "skeptical or inclined to find fault",
+        "category": "cat4",
+        "relatedWords": ["critique", "question", "evaluate", "analyze"]
+      },
+      {
+        "id": "word20",
+        "word": "judgmental",
+        "definition": "expressing an opinion, especially a harsh opinion",
+        "category": "cat4",
+        "relatedWords": ["judge", "assess", "appraise", "weigh"]
+      },
+      {
+        "id": "word21",
+        "word": "cynical",
+        "definition": "disbelieving in the sincerity, motives, or goodness of another's argument",
+        "category": "cat4",
+        "relatedWords": ["doubt", "suspect", "scrutinize", "question"]
+      },
+      {
+        "id": "word22",
+        "word": "mocking",
+        "definition": "treating someone or something with contempt or ridicule",
+        "category": "cat4",
+        "relatedWords": ["taunt", "ridicule", "deride", "parody"]
+      },
+      {
+        "id": "word23",
+        "word": "informative",
+        "definition": "providing useful or interesting information",
+        "category": "cat5",
+        "relatedWords": ["clarify", "explain", "educate", "instruct"]
+      },
+      {
+        "id": "word24",
+        "word": "nostalgic",
+        "definition": "being sentimental or wistful about the past",
+        "category": "cat5",
+        "relatedWords": ["reminisce", "remember", "yearn", "dwell"]
+      },
+      {
+        "id": "word25",
+        "word": "didactic",
+        "definition": "intended to educate or inform",
+        "category": "cat5",
+        "relatedWords": ["teach", "train", "guide"]
+      },
+      {
+        "id": "word26",
+        "word": "questioning",
+        "definition": "critical or skeptical",
+        "category": "cat5",
+        "relatedWords": ["ask", "probe", "investigate"]
+      },
+      {
+        "id": "word27",
+        "word": "contemplative",
+        "definition": "deep in thought",
+        "category": "cat5",
+        "relatedWords": ["ponder", "examine", "reflect"]
+      }
+    ]
+  }
+  
